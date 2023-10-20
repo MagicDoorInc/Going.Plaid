@@ -7,18 +7,18 @@
 		<AssemblyName>Going.Plaid</AssemblyName>
 		<RootNamespace>Going.Plaid</RootNamespace>
 
-		<TargetFrameworks>netstandard2.0;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net7.0</TargetFrameworks>
 		<CheckEolTargetFramework>false</CheckEolTargetFramework>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
 	</PropertyGroup>
 
 	<PropertyGroup Label="NuGet">
-		<Title>Going.Plaid.NET</Title>
+		<Title>Going.Plaid.NET - Magicdoor Edition</Title>
 		<Description>A client api for plaid.com banking service.</Description>
 
-		<Authors>viceroypenguin; Ackara</Authors>
+		<Authors>Magicdoor Inc</Authors>
 		<PackageTags>plaid banking api</PackageTags>
-		<Copyright>Copyright 2022 Turning Code, LLC; Ackara</Copyright>
+		<Copyright>Copyright 2023 MagicDoor</Copyright>
 
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -39,10 +39,8 @@
 
 	<PropertyGroup>
 		<Copyright>
-			Copyright © 2016-2020 Ackara (and others)
-			Copyright © 2020-2022 Turning Code, LLC (and others)
+			Copyright © 2023 MagicDoor Inc
 		</Copyright>
-		<Copyright>$([System.Text.RegularExpressions.Regex]::Replace($(Copyright), `\s+`, ` `).Trim())</Copyright>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -51,43 +49,16 @@
 	</ItemGroup>
 
 	<PropertyGroup>
-		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Going.Plaid.xml</DocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\net7.0\Going.Plaid.xml</DocumentationFile>
 	</PropertyGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
 		<PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
 		<PackageReference Include="System.Text.Json" Version="7.0.3" />
-	</ItemGroup>
-
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-		<PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
-		<PackageReference Include="System.Text.Json" Version="6.0.7" />
-	</ItemGroup>
-
-	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.31" />
-		<PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
-		<PackageReference Include="System.Text.Json" Version="6.0.7" />
-	</ItemGroup>
-
-	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.31" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.31" />
-		<PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
-		<PackageReference Include="System.Text.Json" Version="6.0.7" />
 	</ItemGroup>
 
 	<ItemGroup>
