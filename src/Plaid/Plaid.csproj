@@ -25,7 +25,7 @@
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<RepositoryUrl>https://github.com/viceroypenguin/Going.Plaid</RepositoryUrl>
+		<RepositoryUrl>https://github.com/MagicDoorInc/Going.Plaid</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 
 		<IncludeSymbols>true</IncludeSymbols>
