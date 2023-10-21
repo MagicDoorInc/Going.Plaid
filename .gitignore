@@ -314,3 +314,5 @@ package-*.json
 # Sensitive Files
 secrets.json
 *.received.*
+
+nupkgs/

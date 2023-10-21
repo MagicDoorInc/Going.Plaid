@@ -4,12 +4,13 @@
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 
-		<AssemblyName>Going.Plaid</AssemblyName>
-		<RootNamespace>Going.Plaid</RootNamespace>
+		<AssemblyName>MagicDoor.Going.Plaid</AssemblyName>
+		<RootNamespace>MagicDoor.Going.Plaid</RootNamespace>
 
 		<TargetFrameworks>net7.0</TargetFrameworks>
 		<CheckEolTargetFramework>false</CheckEolTargetFramework>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<AssemblyVersion>1.0</AssemblyVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Label="NuGet">
@@ -29,7 +30,9 @@
 		<RepositoryType>git</RepositoryType>
 
 		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>    
+		
+		<Version>1.0</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
@@ -64,13 +67,5 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 		<PackageReference Include="PolySharp" Version="1.13.2" PrivateAssets="All" />
-		<PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All" />
 	</ItemGroup>
-
-	<PropertyGroup Label="MinVer">
-		<MinVerAutoIncrement>minor</MinVerAutoIncrement>
-		<MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
-		<MinVerTagPrefix>v</MinVerTagPrefix>
-	</PropertyGroup>
-
 </Project>
